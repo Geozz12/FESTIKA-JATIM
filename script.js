@@ -43,12 +43,6 @@ const songs = [
     description: "Lagu dolanan anak-anak yang mengajarkan kejujuran dan berbagi."
   },
   {
-    title: "Bengawan Solo",
-    youtubeId: "csyYxUG6RQI", // GANTI
-    audioFile: "audio/bengawan_solo.mp3",
-    description: "Lagu dolanan anak-anak yang mengajarkan kejujuran dan berbagi."
-  },
-  {
     title: "Slendro Manyura",
     youtubeId: "R2nnlqYxVZw", // GANTI
     audioFile: "audio/selendro_manyura.mp3",

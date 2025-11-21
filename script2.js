@@ -42,12 +42,6 @@ const instruments = [
     image: "img/rebab.jpg",
     audioFile: "audio/rebab.mp3",
     description: "Alat musik perkusi yang menjadi pengatur irama dalam ensemble gamelan."
-  },
-  {
-    title: "Celempung",
-    image: "img/celempung.webp",
-    audioFile: "audio/celempung.mp3",
-    description: "Alat musik petik berdawai, mirip harpa kecil, menghasilkan suara yang lembut dan merdu."
   }
 ];
 
