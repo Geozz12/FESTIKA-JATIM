@@ -31,12 +31,6 @@ const songs = [
     description: "Lagu daerah Jawa Timur yang ceria, biasanya dinyanyikan saat upacara adat."
   },
   {
-    title: "Yen Ing Tawang",
-    youtubeId: "jzn2NI9uvDg", // GANTI
-    audioFile: "audio/yen_Ing_tawang.mp3",
-    description: "Tembang Jawa yang menyiratkan kerinduan akan kehadiran Tuhan dalam kehidupan."
-  },
-  {
     title: "Cublak Suweng",
     youtubeId: "R2nnlqYxVZw", // GANTI
     audioFile: "audio/Cublak_Cublak_Suweng.mp3",
