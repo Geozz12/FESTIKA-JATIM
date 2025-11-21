@@ -202,10 +202,188 @@
       html { font-size: 20px; }
       #beranda, #sejarah { max-width: 1400px; }
     }
+
+    /* ===========================
+      RESPONSIVE MOBILE
+   =========================== */
+@media (max-width: 768px) {
+
+  /* NAVIGASI */
+  header {
+    right: 0;
+    width: 100%;
+    justify-content: center;
+    padding: 0.8rem 0;
+    gap: 0.5rem;
+  }
+
+  .nav-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-width: 1px;
+  }
+
+  /* JUDUL & SUBTITLE */
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  /* BUTTON CONTAINER */
+  .btn-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 260px;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  /* SECTION BERANDA */
+  #beranda {
+    padding: 1.5rem;
+    margin-top: 90px;
+    min-height: auto;
+  }
+
+  /* PARAGRAF */
+  .description {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  /* SEJARAH */
+  #sejarah {
+    margin-top: 60px;
+    padding: 2rem 1.2rem;
+  }
+
+  #sejarah h2 {
+    font-size: 1.8rem;
+  }
+
+  #sejarah p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  /* BACKGROUND */
+  #background,
+  .overlay {
+    background-position: center;
+  }
+}
+
+  /* ===========================
+   RESPONSIVE – TIDAK MEPET
+   =========================== */
+@media (max-width: 768px) {
+
+  /* Beri ruang kiri–kanan pada seluruh halaman */
+  body {
+    padding: 0 1rem;
+  }
+
+  /* NAVIGASI */
+  header {
+    right: 0;
+    width: 100%;
+    justify-content: center;
+    padding: 0.8rem 0;
+  }
+
+  /* BERANDA */
+  #beranda {
+    padding: 2rem 1.5rem; /* Tambah padding kiri–kanan */
+    margin-top: 90px;
+  }
+
+  /* TEXT */
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    padding: 0 0.5rem; /* Biar tidak mepet */
+    text-align: center;
+  }
+
+  /* BUTTON */
+  .btn-container {
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* SEJARAH */
+  #sejarah {
+    padding: 2.5rem 1.5rem; /* Tambah padding kiri–kanan */
+    margin-top: 60px;
+  }
+
+  #sejarah p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+}
+
+/* ===========================
+   LAYAR SANGAT KECIL (HP MINI)
+   =========================== */
+@media (max-width: 480px) {
+
+  body {
+    padding: 0 0.8rem; /* Tambahan ruang */
+  }
+
+  #beranda, #sejarah {
+    padding: 2rem 1rem; /* Ruang kiri–kanan */
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  .btn {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    display: none; /* navigasi hilang di HP */
+  }
+}
+
+
+
   </style>
 </head>
 
 <body>
+
+
 
   <!-- NAVIGATION -->
   <header>
