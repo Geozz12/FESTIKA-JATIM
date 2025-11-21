@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swara Jawa - Mengenal Lagu Jawa Lewat Teknologi</title>
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* BODY */
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* HEADER NAVIGASI */
+    header {
+      position: fixed;
+      top: 0;
+      right: 2rem;
+      display: flex;
+      gap: 1rem;
+      padding: 1rem 0;
+      z-index: 100;
+    }
+
+    .nav-btn {
+      background: rgba(0, 0, 0, 0.3);
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      padding: 0.6rem 1.5rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: #ffd700;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #ffd700;
+    }
+
+    .nav-btn:active {
+      transform: scale(1.15);
+      box-shadow: 0 0 20px #ffec8b;
+    }
+
+    /* BACKGROUND */
+    #background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: opacity 1.5s ease-in-out;
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    /* BERANDA */
+    #beranda {
+      position: relative;
+      z-index: 2;
+      padding: 2rem;
+      max-width: 1000px;
+      min-height: calc(100vh - 80px);
+      margin-top: 80px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      color: white;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+
+    .subtitle {
+      font-size: 1.4rem;
+      font-weight: 300;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 50px;
+      font-weight: 500;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      color: white;
+      transition: 0.3s;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .btn-lagu { background: #b8860b; }
+    .btn-alat { background: #2e4d3a; }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+    }
+
+    .btn-lagu:hover { background: #9e700a; }
+    .btn-alat:hover { background: #253c2d; }
+
+    .description {
+      margin-top: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+
+    /* SEJARAH */
+    #sejarah {
+      position: relative;
+      z-index: 2;
+      margin-top: 100px;
+      margin-bottom: 3rem;
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      background: rgba(0,0,0,0.4);
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    #sejarah h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+
+    #sejarah p {
+      text-align: left;
+      font-size: 1.2rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    /* RESPONSIVE */
+    html { font-size: 16px; }
+
+    @media (min-width: 1200px) {
+      html { font-size: 18px; }
+      #beranda, #sejarah { max-width: 1200px; }
+    }
+
+    @media (min-width: 1600px) {
+      html { font-size: 20px; }
+      #beranda, #sejarah { max-width: 1400px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <button class="nav-btn" onclick="scrollToSection('beranda')">Beranda</button>
+    <button class="nav-btn" onclick="scrollToSection('sejarah')">Sejarah</button>
+  </header>
+
+  <!-- BACKGROUND -->
+  <div id="background"></div>
+  <div class="overlay"></div>
+
+  <!-- BERANDA -->
+  <section id="beranda">
+    <h1>Swara Jawa</h1>
+    <p class="subtitle">Mengenal Lagu Jawa Lewat Teknologi</p>
+
+    <div class="btn-container">
+      <a href="tampilan_lagu.html" class="btn btn-lagu">🎵 Jelajahi Lagu</a>
+      <a href="tampilan_alat_musik.html" class="btn btn-lagu">🥁 Mengenal Alat Musik</a>
+    </div>
+
+    <p class="description">
+      Dengarkan, pelajari, dan lestarikan warisan musik Jawa secara interaktif — tanpa perlu alat musik, cukup dengan perangkat Anda.
+    </p>
+  </section>
+
+  <!-- SEJARAH -->
+  <section id="sejarah">
+    <h2>Sejarah Lagu Jawa</h2>
+
+    <p> lagu Jawa tidak lepas dari perkembangan budaya dan kesenian masyarakat Jawa yang telah berlangsung selama berabad-abad. Pada masa kerajaan-kerajaan kuno seperti Mataram Kuno, Majapahit, hingga Mataram Islam, musik sudah menjadi bagian penting dalam ritual keagamaan, upacara adat, dan hiburan istana. Awalnya, lagu Jawa didominasi oleh **tembang Jawa** yang berpegang pada aturan metrum dan etika sastra, seperti *macapat* yang meliputi Maskumambang, Mijil, Sinom, hingga Pangkur. Seiring berkembangnya zaman, musik gamelan menjadi pusat dari kesenian Jawa, mengiringi berbagai bentuk tembang dan tarian. Memasuki abad ke-20, lagu Jawa mulai mengalami modernisasi dengan munculnya **campursari**, yang memadukan alat musik tradisional gamelan dengan instrumen modern seperti gitar dan keyboard. Tokoh-tokoh seperti Manthous dan Didi Kempot kemudian membawa lagu Jawa semakin populer di kalangan masyarakat luas, termasuk generasi muda. Kini, lagu Jawa terus berevolusi, hadir dalam bentuk kontemporer dengan sentuhan pop, dangdut, dan elektronik, tetapi tetap mempertahankan kekayaan nilai budaya dan filosofi yang menjadi ciri khasnya. <p> Musik Jawa juga kerap digunakan dalam berbagai upacara adat, pertunjukan wayang, dan pentas kesenian. Kini, dengan bantuan teknologi, generasi muda bisa lebih mudah mengenal dan melestarikan warisan budaya ini. </p>
+  </section>
+
+  <footer>
+    © 2025 Swara Jawa | Dibangun untuk melestarikan budaya Jawa melalui teknologi
+  </footer>
+
+  <script>
+    /* BACKGROUND SWITCHER */
+    const images = [
+      'img/gambar_halaman_1.jpg',
+      'img/gambar_halaman_1_2.jpg',
+      'img/gambar_halaman_1_3.jpg'
+    ];
+
+    const backgroundElement = document.getElementById('background');
+    let currentIndex = 0;
+
+    function changeBackground() {
+      backgroundElement.style.opacity = 0;
+      setTimeout(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        backgroundElement.style.backgroundImage = `url('${images[currentIndex]}')`;
+        backgroundElement.style.opacity = 1;
+      }, 1500);
+    }
+
+    setInterval(changeBackground, 5000);
+    backgroundElement.style.backgroundImage = `url('${images[0]}')`;
+
+    /* SCROLL FUNCTION */
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
